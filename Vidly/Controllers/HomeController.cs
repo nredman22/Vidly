@@ -33,45 +33,26 @@ namespace Vidly.Controllers
         {
             var movies = new List<Movie>
             {
-                new Movie()
-                {
-                    ID = 1,
-                    Name = "Bad Boys"
-                },
-                new Movie()
-                {
-                    ID = 2,
-                    Name = "Die Hard"
-                }
+                new Movie() { ID = 1, Name = "Bad Boys" },
+                new Movie() { ID = 2, Name = "Die Hard" }
             };
 
-            var viewModel = new MoviesViewModel()
-            {
-                Movies = movies
-            };
+            var viewModel = new MoviesViewModel() { Movies = movies };
 
             return View(viewModel);
         }
 
         public ActionResult Customers()
         {
-            var movies = new List<Movie>
+            var customers = new List<Customer>
             {
-                new Movie()
-                {
-                    ID = 1,
-                    Name = "Bad Boys"
-                },
-                new Movie()
-                {
-                    ID = 2,
-                    Name = "Die Hard"
-                }
+                new Customer() { ID = 1, Name = "Tom Brady" },
+                new Customer() { ID = 2, Name = "Kirk Cousins" }
             };
 
-            var viewModel = new MoviesViewModel()
+            var viewModel = new CustomerViewModel()
             {
-                Movies = movies
+                Customers = customers
             };
 
             return View(viewModel);

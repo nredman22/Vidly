@@ -40,5 +40,28 @@ namespace Vidly.Controllers
         {
             return Content(year + "/" + month);
         }
+
+        [Route("movies/details/{id}")]
+        public ActionResult Details(int id)
+        {
+            var movies = new List<Movie>
+            {
+                new Movie() { ID = 1, Name = "Bad Boys" },
+                new Movie() { ID = 2, Name = "Die Hard" }
+            };
+
+            var foundMovie = new Movie();
+            try
+            {
+                foundMovie = movies.First(movie => movie.ID == id);
+            }
+            catch
+            {
+                return HttpNotFound();
+
+            }
+
+            return View(foundMovie);
+        }
     }
 }
