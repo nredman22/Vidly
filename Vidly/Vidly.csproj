@@ -207,9 +207,18 @@
     <Compile Include="Migrations\201908112334436_AddingBirthdateToCustomers.Designer.cs">
       <DependentUpon>201908112334436_AddingBirthdateToCustomers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908112355178_AddMovieAndGenreTables.cs" />
+    <Compile Include="Migrations\201908112355178_AddMovieAndGenreTables.Designer.cs">
+      <DependentUpon>201908112355178_AddMovieAndGenreTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908120008408_SeedGenreTable.cs" />
+    <Compile Include="Migrations\201908120008408_SeedGenreTable.Designer.cs">
+      <DependentUpon>201908120008408_SeedGenreTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -321,6 +330,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908112334436_AddingBirthdateToCustomers.resx">
       <DependentUpon>201908112334436_AddingBirthdateToCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908112355178_AddMovieAndGenreTables.resx">
+      <DependentUpon>201908112355178_AddMovieAndGenreTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908120008408_SeedGenreTable.resx">
+      <DependentUpon>201908120008408_SeedGenreTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
