@@ -30,20 +30,6 @@ namespace Vidly.Controllers
             return View(movies);
         }
 
-        public ActionResult New()
-        {
-            var viewModel = new MovieFormViewModel
-            {
-                Title = "New",
-                Movie = new Movie(),
-                Genres = _context.Genres.ToList()
-            };
-
-            return View("MovieForm", viewModel);
-        }
-
-        
-
         // GET: Movies/Random
         public ActionResult Random()
         {
