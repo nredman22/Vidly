@@ -5,8 +5,9 @@
 }
 
 <h2>Movies</h2>
-<button>@Html.ActionLink("New", "New", "Movies", null, null)</button>
-
+<div>
+    <button class="btn btn-primary" style="margin-bottom: 10px;">@Html.ActionLink("New Movie", "New", "Movies", new { Style = "color:white"})</button>
+</div>
 @if (Model.Count() < 1)
 {
     <p>No movies are available</p>
@@ -24,7 +25,7 @@ else
             @foreach (var movie in Model)
             {
                 <tr>
-                    <td>@Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
+                    <td>@Html.ActionLink(movie.Name, "Edit", "Movies", new { id = movie.Id }, null)</td>
                     <td>@movie.Genre.Name</td>
                 </tr>
             }
